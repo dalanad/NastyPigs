@@ -172,6 +172,7 @@ zoom = Vector2( 0.5, 0.5 )
 position = Vector2( 625, 339 )
 scale = Vector2( 2.09598, 2.09598 )
 frames = SubResource( 15 )
+frame = 4
 playing = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -194,7 +195,7 @@ fit_content_height = true
 position = Vector2( 426, 344 )
 scale = Vector2( 1.53448, 1.53448 )
 frames = SubResource( 30 )
-frame = 5
+frame = 6
 playing = true
 
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
