@@ -1,0 +1,110 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/Mario-Kart-DS.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/Kings and Pigs/Sprites/12-Live and Coins/Big Heart Idle (18x14).png" type="Texture" id=2]
+[ext_resource path="res://HUD.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://assets/BubblegumSans-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 40
+font_data = SubResource( 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 18, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 36, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 54, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 72, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 90, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 108, 0, 18, 14 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 126, 0, 18, 14 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 52.0
+margin_right = 84.0
+margin_bottom = 71.0
+rect_pivot_offset = Vector2( 70, 17 )
+custom_fonts/font = SubResource( 1 )
+text = "Score"
+
+[node name="LevelLabel" type="Label" parent="."]
+margin_left = 15.0
+margin_top = 10.0
+margin_right = 99.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 70, 17 )
+custom_fonts/font = SubResource( 17 )
+text = "Leval"
+
+[node name="Lives" type="VFlowContainer" parent="."]
+margin_left = 15.0
+margin_top = 63.0
+margin_right = 241.0
+margin_bottom = 103.0
+
+[node name="L1" type="AnimatedSprite" parent="Lives"]
+position = Vector2( 2, 21 )
+scale = Vector2( 1.38889, 1.5 )
+frames = SubResource( 10 )
+
+[node name="L2" type="AnimatedSprite" parent="Lives"]
+position = Vector2( 24, 22 )
+scale = Vector2( 1.38889, 1.5 )
+frames = SubResource( 10 )
+
+[node name="L3" type="AnimatedSprite" parent="Lives"]
+position = Vector2( 45.5, 22.5 )
+scale = Vector2( 1.38889, 1.5 )
+frames = SubResource( 10 )
+
+[node name="L4" type="AnimatedSprite" parent="Lives"]
+visible = false
+position = Vector2( 68.5, 22.5 )
+scale = Vector2( 1.38889, 1.5 )
+frames = SubResource( 10 )
+
+[node name="L5" type="AnimatedSprite" parent="Lives"]
+visible = false
+position = Vector2( 89.5, 22.5 )
+scale = Vector2( 1.38889, 1.5 )
+frames = SubResource( 10 )

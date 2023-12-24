@@ -1,0 +1,212 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://FontBubble.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/Kings and Pigs/Sprites/01-King Human/Idle (78x58).png" type="Texture" id=3]
+[ext_resource path="res://assets/Kings and Pigs/Sprites/02-King Pig/Idle (38x28).png" type="Texture" id=8]
+[ext_resource path="res://assets/music/Fluffing-a-Duck.mp3" type="AudioStream" id=11]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 8 )
+region = Rect2( 38, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 8 )
+region = Rect2( 76, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 8 )
+region = Rect2( 114, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 8 )
+region = Rect2( 152, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 8 )
+region = Rect2( 190, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 8 )
+region = Rect2( 228, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 8 )
+region = Rect2( 266, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 8 )
+region = Rect2( 304, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 8 )
+region = Rect2( 342, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 8 )
+region = Rect2( 380, 0, 38, 28 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 8 )
+region = Rect2( 418, 0, 38, 28 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 3 )
+region = Rect2( 78, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 3 )
+region = Rect2( 156, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 3 )
+region = Rect2( 234, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 3 )
+region = Rect2( 312, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 3 )
+region = Rect2( 390, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 3 )
+region = Rect2( 468, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 3 )
+region = Rect2( 546, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 3 )
+region = Rect2( 624, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 3 )
+region = Rect2( 702, 0, 78, 58 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 3 )
+region = Rect2( 780, 0, 78, 58 )
+
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=16]
+font_path = "res://assets/BubblegumSans-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=17]
+size = 30
+font_data = SubResource( 16 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 60
+font_data = SubResource( 16 )
+
+[node name="Node2D" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 64.0
+margin_top = 104.0
+margin_right = 64.0
+margin_bottom = 104.0
+size_flags_stretch_ratio = 0.0
+script = ExtResource( 1 )
+
+[node name="RestartButton" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 299.0
+margin_right = 570.0
+margin_bottom = 331.0
+rect_pivot_offset = Vector2( 43, 17 )
+custom_fonts/font = ExtResource( 2 )
+text = "Restart"
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 379.0
+margin_right = 570.0
+margin_bottom = 411.0
+rect_pivot_offset = Vector2( 43, 17 )
+custom_fonts/font = ExtResource( 2 )
+text = "Quit"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 450.0
+margin_top = 339.0
+margin_right = 570.0
+margin_bottom = 371.0
+rect_pivot_offset = Vector2( 8, 16 )
+custom_fonts/font = ExtResource( 2 )
+text = "Main Menu"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 517, 302 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 625, 324 )
+scale = Vector2( 1.98884, 1.98884 )
+frames = SubResource( 15 )
+frame = 4
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 405, 327 )
+scale = Vector2( 1.61035, 1.61241 )
+frames = SubResource( 30 )
+frame = 4
+playing = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -9.926
+autoplay = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 400.0
+margin_top = 240.0
+margin_right = 610.0
+margin_bottom = 276.0
+custom_fonts/font = SubResource( 17 )
+text = "Score"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+margin_left = 408.0
+margin_top = 184.0
+margin_right = 618.0
+margin_bottom = 255.0
+custom_fonts/font = SubResource( 18 )
+text = "The End"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
